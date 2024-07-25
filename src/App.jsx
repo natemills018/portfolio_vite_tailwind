@@ -1,37 +1,26 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route,Link } from 'react-router-dom'
+import AboutMe from './components/AboutMe'
+import Home from './components/Home'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
 
-  const handleButton = () => {
-    if(document.body.classList.contains('dark')) {
-      document.body.classList.remove('dark');
-    } else {
-      document.body.classList.add('dark')
-    }
-     
-
-  }
-
+  
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      {/* <div>
+        < Home/>
       </div>
 
       <h1>Vite + React</h1>
 
-      <button className='bg-indigo-400 rounded-sm'>Click me!</button>
+      <button className='my-6 bg-indigo-400 rounded-sm '>Click me!</button>
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
@@ -43,7 +32,20 @@ function App() {
       </div>
       <p className="text-6xl font-bold underline">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
+
+
+      <BrowserRouter>
+		  
+			<Link to='/' className='m-3 btn btn-primary'>Home</Link>
+      <Link to='/aboutme' className='m-3 btn btn-secondary'>About Me</Link>
+
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/aboutme' element={<AboutMe />} />
+				
+			</Routes>
+		</BrowserRouter>
     </>
   )
 }
