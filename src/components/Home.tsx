@@ -11,7 +11,7 @@ const Home = (props: HomeProps) => {
 
 
     return (
-        <main className='bg-primary'>
+        <main className='h-screen bg-primary'>
             Is THis working?
         </main>
     )
