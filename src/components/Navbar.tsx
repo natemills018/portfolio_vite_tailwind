@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
 
 interface NavBarProps {
 
@@ -11,11 +10,31 @@ interface NavBarProps {
 const NavBar = (props: NavBarProps) => {
 
     return (
-        <div className='px-5 py-2'>
-            <Link to='/' className='btn btn-primary'>Home</Link>
-            <Link to='/aboutme' className='btn btn-secondary'>About Me</Link>
-            <Link to='/skills' className='btn btn-accent'>Skills</Link>
+        <div className="bg-success">
+        <div className="nav">
+          <a
+            className="site-title"
+            href="/"
+          >
+            Portfolio
+          </a>
+  
+          <ul className="">
+            <li>
+              <a href="#about">About Me</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
     )
 }
 
