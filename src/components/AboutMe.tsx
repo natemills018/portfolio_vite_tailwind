@@ -9,7 +9,7 @@ const AboutMe = (props: AboutMeProps) => {
   return (
     <div>
       <section className="">
-        <h1 className="m-6 text-6xl text-primary/60">About Me!</h1>
+        <h1 className="m-6 text-6xl text-primary/60">About Me</h1>
         <div className="card">
           Hello, My name is Nate Mills! Full stack web developer with a passion
           for tech and learning new frameworks. Proficient in JavaScript,
