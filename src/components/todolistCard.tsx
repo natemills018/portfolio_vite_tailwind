@@ -14,31 +14,34 @@ const card = (
         Word of the Day
       </Typography> */}
       <Typography variant="h5" component="div">
-        CRUD Bookstore App
+        Todo-List
       </Typography>
       {/* <Typography sx={{ mb: 1.5 }} color="text.secondary">
         adjective
       </Typography> */}
       <Typography variant="body2">
-        MERN stack application with auth/login functionality
+        Simple yet effective way to track tasks and deadlines
         
       </Typography>
+
     </CardContent>
     <CardActions className='flex justify-center'>
       {/* <Button size="small" onClick={}>Learn More</Button> */}
-      <a className='btn btn-primary' href='https://github.com/natemills018/bookstore_final_02'>GitHub Repo</a>
+      <a className='btn btn-primary' href='https://github.com/natemills018/todolist-tailwind'>GitHub Repo</a>
       <a className='btn btn-secondary' href=''>Site</a>
     </CardActions>
   </React.Fragment>
 );
 
-const BookstoreCard = () => {
+const TodoListCard = () => {
   return (
     <Box sx={{ minWidth: 275 }}>
-      <Card variant="outlined"  className='shadow-xl'>{card}</Card>
+        
+      <Card variant='outlined' className='shadow-xl'>{card}</Card>
+      
     </Box>
   );
 }
 
 
-export default BookstoreCard;
+export default TodoListCard;

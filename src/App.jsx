@@ -9,6 +9,11 @@ import Button from "@mui/material/Button";
 import { themeChange } from "theme-change";
 import MediaControlCard from "./components/cardmedia";
 import PaddingComponent from "./PaddingComponents";
+import ExperienceComponent from "./components/ExperienceComponent";
+import BookstoreCard from "./components/cardmediawithoutimage";
+import ChirperCard from "./components/ChriperCard";
+import ShapeCard from "./components/shapeCard";
+import TodoListCard from "./components/todolistCard";
 import "./App.css";
 
 const App = () => {
@@ -21,7 +26,7 @@ const App = () => {
     <div>
       <div className="nav">
         <a
-          className="site-title"
+          className="text-4xl site-title"
           href="/"
         >
           Portfolio
@@ -29,16 +34,28 @@ const App = () => {
 
         <ul className="ul">
           <li>
-            <a href="#about">About Me</a>
+            <a
+              className="text-xl"
+              href="#about"
+            >
+              About Me
+            </a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a
+              className="text-xl"
+              href="#projects"
+            >
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <a
+              className="text-xl"
+              href="#contact"
+            >
+              Contact
+            </a>
           </li>
           <li>
             <select
@@ -86,24 +103,33 @@ const App = () => {
         <div className="flex justify-center pt-4 mt-5 row">
           <div className="shadow-xl card bg-accent/30">
             <p className="text-3xl">
-              My name is Nate Mills! Full stack web developer with a
-              passion for tech and learning new frameworks. Proficient in
-              JavaScript, TypeScript, React, Express, SQL and Node. I'm focused
-              on finding solutions to complex problems, and creating impactful
-              software.
+              My name is Nate Mills! Full stack web developer with a passion for
+              tech and learning new frameworks. Proficient in JavaScript,
+              TypeScript, React, Express, SQL and Node. I'm focused on finding
+              solutions to complex problems, and creating impactful software.
             </p>
           </div>
         </div>
+        <ExperienceComponent />
+        <PaddingComponent />
+        
       </div>
 
       <div
-        className="container big-margin"
+        className="container bigger-margin"
         id="projects"
       >
-        <div className="carousel rounded-box">
-          <div className="carousel-item">
-            <Button variant="contained">Hello Carousel</Button>
-          </div>
+        <h1 className="p-10 text-6xl text-info">
+          {" "}
+          Check out some of these Projects!
+        </h1>
+        <div className="flex justify-center pt-4 mt-5 space-x-4">
+          <BookstoreCard />
+          <ChirperCard />
+        </div>
+        <div className="flex justify-center pt-4 mt-5 space-x-4">
+          <ShapeCard />
+          <TodoListCard />
         </div>
       </div>
 
@@ -111,7 +137,7 @@ const App = () => {
         className="container"
         id="contact"
       >
-        <PaddingComponent />
+        
       </div>
     </div>
   );

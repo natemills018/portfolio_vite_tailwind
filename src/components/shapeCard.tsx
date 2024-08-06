@@ -14,31 +14,36 @@ const card = (
         Word of the Day
       </Typography> */}
       <Typography variant="h5" component="div">
-        CRUD Bookstore App
+        Shape up or Shape Out
       </Typography>
       {/* <Typography sx={{ mb: 1.5 }} color="text.secondary">
         adjective
       </Typography> */}
       <Typography variant="body2">
-        MERN stack application with auth/login functionality
-        
+        Used DOM manipulation to build an interactive
       </Typography>
+      <Typography>
+      shapebuilder in the browser
+      </Typography>
+
     </CardContent>
     <CardActions className='flex justify-center'>
       {/* <Button size="small" onClick={}>Learn More</Button> */}
-      <a className='btn btn-primary' href='https://github.com/natemills018/bookstore_final_02'>GitHub Repo</a>
+      <a className='btn btn-primary' href='https://github.com/natemills018/Shape-up-or-Shape-out/blob/master/scripts.js'>GitHub Repo</a>
       <a className='btn btn-secondary' href=''>Site</a>
     </CardActions>
   </React.Fragment>
 );
 
-const BookstoreCard = () => {
+const ShapeCard = () => {
   return (
     <Box sx={{ minWidth: 275 }}>
-      <Card variant="outlined"  className='shadow-xl'>{card}</Card>
+        
+      <Card variant='outlined' className='shadow-xl'>{card}</Card>
+      
     </Box>
   );
 }
 
 
-export default BookstoreCard;
+export default ShapeCard;
