@@ -123,13 +123,14 @@ const App = () => {
           {" "}
           Check out some of these Projects!
         </h1>
-        <div className="flex justify-center pt-4 mt-5 space-x-4">
+        <div className="flex justify-center pt-4 mt-5 space-x-6 ">
           <BookstoreCard />
           <ChirperCard />
-        </div>
-        <div className="flex justify-center pt-4 mt-5 space-x-4">
           <ShapeCard />
           <TodoListCard />
+        </div>
+        <div className="flex justify-center pt-4 mt-5 space-x-4">
+          
         </div>
       </div>
 
