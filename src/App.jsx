@@ -14,6 +14,8 @@ import BookstoreCard from "./components/cardmediawithoutimage";
 import ChirperCard from "./components/ChriperCard";
 import ShapeCard from "./components/shapeCard";
 import TodoListCard from "./components/todolistCard";
+import ProfileImage from "./components/profileimage";
+import Sidebar from "./components/Sidebar";
 import "./App.css";
 
 const App = () => {
@@ -23,7 +25,7 @@ const App = () => {
   });
 
   return (
-    <div>
+    <div className="h-screen bg-gradient-to-tr">
       <div className="nav">
         <a
           className="text-4xl site-title"
@@ -77,10 +79,15 @@ const App = () => {
           </li>
         </ul>
       </div>
+
       <main className="p-5 smaller-margin">
-        <div className="flex justify-center p-2 shadow-xl bg-primary">
+        <div className="static flex justify-center p-2 shadow-xl bg-primary">
+          <div className="relative size-3/6">
+            <img src="./images/md -Nate Mills Headshot.png" />
+          </div>
           <img
-            className="object-contain h-48 w-96"
+            className="relative m-auto size-32"
+            // className="object-contain h-48 w-96"
             src="/images/nmills media_logo Concept 7.png"
           />
           <div className="clear-right text-secondary">
@@ -112,7 +119,6 @@ const App = () => {
         </div>
         <ExperienceComponent />
         <PaddingComponent />
-        
       </div>
 
       <div
@@ -123,23 +129,19 @@ const App = () => {
           {" "}
           Check out some of these Projects!
         </h1>
-        <div className="flex justify-center pt-4 mt-5 space-x-6 ">
+        <div className="flex justify-center pt-4 mt-5 space-x-6">
           <BookstoreCard />
           <ChirperCard />
           <ShapeCard />
           <TodoListCard />
         </div>
-        <div className="flex justify-center pt-4 mt-5 space-x-4">
-          
-        </div>
+        <div className="flex justify-center pt-4 mt-5 space-x-4"></div>
       </div>
 
       <div
         className="container"
         id="contact"
-      >
-        
-      </div>
+      ></div>
     </div>
   );
 };
