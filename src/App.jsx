@@ -19,6 +19,10 @@ import Sidebar from "./components/Sidebar";
 import "./App.css";
 
 const App = () => {
+
+  const images = {
+    
+  }
   const [isDark, setisDark] = useState(true);
   useEffect(() => {
     themeChange(false);
@@ -81,10 +85,9 @@ const App = () => {
       </div>
 
       <main className="p-5 smaller-margin">
+      <ProfileImage imageURL={'/images/md -Nate Mills Headshot.png'} altText={'Profile Image'}/>
+
         <div className="static flex justify-center p-2 shadow-xl bg-primary">
-          <div className="relative size-3/6">
-            <img src="./images/md -Nate Mills Headshot.png" />
-          </div>
           <img
             className="relative m-auto size-32"
             // className="object-contain h-48 w-96"
