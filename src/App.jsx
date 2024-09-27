@@ -21,6 +21,7 @@ import "./App.css";
 const App = () => {
 
   const images = {
+    // heere's where I'll add an array of images for gallery
     
   }
   const [isDark, setisDark] = useState(true);
