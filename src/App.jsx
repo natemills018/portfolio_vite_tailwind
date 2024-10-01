@@ -86,7 +86,7 @@ const App = () => {
       </div>
 
       <main className="p-5 smaller-margin">
-      <ProfileImage imageURL={'/images/md -Nate Mills Headshot.png'} altText={'Profile Image'}/>
+      {/* <ProfileImage imageURL={'/images/md -Nate Mills Headshot.png'} altText={'Profile Image'}/> */}
 
         <div className="static flex justify-center p-2 shadow-xl bg-primary">
           <img
