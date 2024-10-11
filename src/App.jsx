@@ -98,9 +98,9 @@ const App = () => {
             <h1 className="text-7xl">Nathaniel Mills</h1>
             <h1 className="text-7xl">Full Stack Engineer</h1>
 
-            <h1 className="text-2xl">
-              'Perpetual optimism is a force multipler'
-            </h1>
+            <a href="/images/Mills_Nate_Technical_Resume_2024" className="text-2xl">
+              'Professional Resume'
+            </a>
             <h1 className="text-sm italic"> Colin Powell</h1>
           </div>
         </div>
