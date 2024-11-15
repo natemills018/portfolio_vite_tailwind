@@ -92,13 +92,13 @@ const App = () => {
           <img
             className="relative m-auto size-32"
             // className="object-contain h-48 w-96"
-            src="/images/nmills media_logo Concept 7.png"
+            src="/images/nmills media_logo Concept 7.pdf"
           />
           <div className="clear-right text-secondary">
             <h1 className="text-7xl">Nathaniel Mills</h1>
             <h1 className="text-7xl">Full Stack Engineer</h1>
 
-            <a href="/images/Mills_Nate_Technical_Resume_2024" className="text-2xl">
+            <a href="/images/Mills_Nate_Technical_Resume_2024.pdf" className="text-2xl">
               'Professional Resume'
             </a>
             <h1 className="text-sm italic"> Colin Powell</h1>
@@ -127,12 +127,14 @@ const App = () => {
 
       <div
         className="container bigger-margin"
+        
         id="projects"
       >
         <h1 className="p-10 text-6xl text-info">
           {" "}
           Check out some of these Projects!
         </h1>
+
         <div className="flex justify-center pt-4 mt-5 space-x-6">
           <BookstoreCard />
           <ChirperCard />
