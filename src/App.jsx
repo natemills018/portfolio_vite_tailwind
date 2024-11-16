@@ -17,6 +17,8 @@ import TodoListCard from "./components/todolistCard";
 import ProfileImage from "./components/profileimage";
 import Sidebar from "./components/Sidebar";
 import "./App.css";
+import Article from "./components/ArticleTest";
+
 
 const App = () => {
 
@@ -30,6 +32,7 @@ const App = () => {
   });
 
   return (
+    
     <div className="h-screen bg-gradient-to-tr">
       <div className="nav">
         <a
@@ -87,21 +90,27 @@ const App = () => {
 
       <main className="p-5 smaller-margin">
       {/* <ProfileImage imageURL={'/images/md -Nate Mills Headshot.png'} altText={'Profile Image'}/> */}
+        
+        
+        <a href="/images/Mills_Nate_Technical_Resume_2024.pdf" className="text-6xl">
+              'Professional Resume'
+            </a>
+
+            
+            
+            
 
         <div className="static flex justify-center p-2 shadow-xl bg-primary">
           <img
             className="relative m-auto size-32"
             // className="object-contain h-48 w-96"
-            src="/images/nmills media_logo Concept 7.pdf"
+            src="/images/nmills media_logo Concept 7.png"
           />
           <div className="clear-right text-secondary">
             <h1 className="text-7xl">Nathaniel Mills</h1>
             <h1 className="text-7xl">Full Stack Engineer</h1>
 
-            <a href="/images/Mills_Nate_Technical_Resume_2024.pdf" className="text-2xl">
-              'Professional Resume'
-            </a>
-            <h1 className="text-sm italic"> Colin Powell</h1>
+          
           </div>
         </div>
       </main>
@@ -149,6 +158,7 @@ const App = () => {
         id="contact"
       ></div>
     </div>
+   
   );
 };
 
