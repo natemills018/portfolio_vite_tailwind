@@ -19,20 +19,30 @@ import Sidebar from "./components/Sidebar";
 import "./App.css";
 import Article from "./components/ArticleTest";
 
-
 const App = () => {
-
   const images = {
     // heere's where I'll add an array of images for gallery
-    
-  }
+  };
   const [isDark, setisDark] = useState(true);
   useEffect(() => {
     themeChange(false);
   });
 
+  const articleData = {
+    title: "React Components Explained",
+    author: "Jane Doe",
+    date: "2024-11-15",
+    content:
+      "Understanding components in React is crucial for building scalable web applications...",
+    image: "https://via.placeholder.com/600x400",
+  };
+
+  // Function to handle the click event
+  const handleArticleClick = () => {
+    console.log("Article clicked!");
+  };
+
   return (
-    
     <div className="h-screen bg-gradient-to-tr">
       <div className="nav">
         <a
@@ -68,37 +78,57 @@ const App = () => {
             </a>
           </li>
           <li>
-            <select
-              className="m-2 gradientselect"
-              data-choose-theme
-            >
-              <option
-                disabled
-                value=""
-              >
-                Pick a theme
-              </option>
-              <option value="">Default</option>
-              <option value="light">Light</option>
-              <option value="lemonade">Lemonade</option>
-              <option value="valentine">Valentine</option>
-              <option value="bumblebee">BZzzz</option>
-            </select>
+            <ul className="flex flex-wrap gap-4 p-4">
+              {[
+                { name: "Default", value: "" },
+                { name: "Light", value: "light" },
+                { name: "Lemonade", value: "lemonade" },
+                { name: "Valentine", value: "valentine" },
+                { name: "BZzzz", value: "bumblebee" },
+              ].map((theme) => (
+                <li key={theme.value}>
+                  <button
+                    className="px-4 py-2 m-2 text-sm font-bold capitalize rounded-lg shadow-md bg-base-200 hover:bg-base-300 focus:outline-none"
+                    data-set-theme={theme.value}
+                    onClick={() =>
+                      document.documentElement.setAttribute(
+                        "data-theme",
+                        theme.value
+                      )
+                    }
+                  >
+                    {theme.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </li>
         </ul>
       </div>
 
       <main className="p-5 smaller-margin">
-      {/* <ProfileImage imageURL={'/images/md -Nate Mills Headshot.png'} altText={'Profile Image'}/> */}
-        
-        
-        <a href="/images/Mills_Nate_Technical_Resume_2024.pdf" className="text-6xl">
-              'Professional Resume'
-            </a>
+        {/* <ProfileImage imageURL={'/images/md -Nate Mills Headshot.png'} altText={'Profile Image'}/> */}
+        {/* 
+        <a
+          href="/images/Mills_Nate_Technical_Resume_2024.pdf"
+          className="text-6xl"
+        >
+          'Professional Resume'
+        </a> */}
 
-            
-            
-            
+        <a
+          href="/images/Mills_Nate_Technical_Resume_2024.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-6 py-3 mb-5 text-xl font-bold text-center text-black transition-transform duration-300 bg-gray-200 rounded-md hover:shadow-lg hover:scale-105"
+        >
+          <img
+            src="/images/nmills media_logo Concept 7.png"
+            alt="PDF Icon"
+            className="w-6 h-6"
+          />
+          Professional Resume
+        </a>
 
         <div className="static flex justify-center p-2 shadow-xl bg-primary">
           <img
@@ -109,8 +139,6 @@ const App = () => {
           <div className="clear-right text-secondary">
             <h1 className="text-7xl">Nathaniel Mills</h1>
             <h1 className="text-7xl">Full Stack Engineer</h1>
-
-          
           </div>
         </div>
       </main>
@@ -122,7 +150,7 @@ const App = () => {
         {/* <h1 className="m-6 text-6xl">About Me</h1> */}
         <div className="flex justify-center pt-4 mt-5 row">
           <div className="shadow-xl card bg-accent/30">
-            <p className="text-3xl">
+            <p className="text-2xl">
               My name is Nate Mills! Full stack web developer with a passion for
               tech and learning new frameworks. Proficient in JavaScript,
               TypeScript, React, Express, SQL and Node. I'm focused on finding
@@ -136,7 +164,6 @@ const App = () => {
 
       <div
         className="container bigger-margin"
-        
         id="projects"
       >
         <h1 className="p-10 text-6xl text-info">
@@ -158,7 +185,6 @@ const App = () => {
         id="contact"
       ></div>
     </div>
-   
   );
 };
 
