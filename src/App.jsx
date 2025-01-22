@@ -18,6 +18,9 @@ import ProfileImage from "./components/profileimage";
 import Sidebar from "./components/Sidebar";
 import "./App.css";
 import Article from "./components/ArticleTest";
+import MyCard from "./components/RevealCard";
+import PortfolioBg from "./components/PortfolioBG";
+
 
 const App = () => {
   const images = {
@@ -43,16 +46,11 @@ const App = () => {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-tr">
-      <div className="nav">
-        <a
-          className="text-4xl site-title"
-          href="/"
-        >
-          Portfolio
-        </a>
-
-        <ul className="ul">
+    <div className="relative"> <PortfolioBg />
+    {/* <div className="h-screen bg-gradient-to-tr"> */}
+      <div className="flex flex-col items-center p-4 text-white nav md:flex-row">
+       
+        <ul className="flex flex-col gap-4 md:flex-row">
           <li>
             <a
               className="text-xl"
@@ -111,11 +109,13 @@ const App = () => {
             src="/images/nmills media_logo Concept 7.png"
           />
           <div className="clear-right text-secondary">
-            <h1 className="text-7xl">Nathaniel Mills</h1>
-            <h1 className="text-7xl">Full Stack Engineer</h1>
+            <h1 className="text-3xl md:text-7xl">Nathaniel Mills</h1>
+            <h1 className="text-3xl md:text-7xl">Full Stack Engineer</h1>
           </div>
         </div>
       </main>
+
+      <MyCard /> 
 
       <div
         className="container big-margin"
@@ -158,6 +158,7 @@ const App = () => {
         className="container"
         id="contact"
       ></div>
+    {/* </div> */}
     </div>
   );
 };
