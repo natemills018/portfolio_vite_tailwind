@@ -46,7 +46,7 @@ const App = () => {
   };
 
   return (
-    <div className="relative"> <PortfolioBg />
+    <div className="relative"> 
     {/* <div className="h-screen bg-gradient-to-tr"> */}
       <div className="flex flex-col items-center p-4 text-white nav md:flex-row">
        
@@ -89,7 +89,7 @@ const App = () => {
         </a> */}
 
         <a
-          href="/images/Mills_Nate_Technical_Resume_2024.pdf"
+          href="/images/Mills_Nate_Technical_Resume_2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-6 py-3 mb-5 text-xl font-bold text-center text-black transition-transform duration-300 bg-gray-200 rounded-md hover:shadow-lg hover:scale-105"
