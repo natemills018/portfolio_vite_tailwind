@@ -46,36 +46,10 @@ const App = () => {
   };
 
   return (
-    <div className="relative"> 
+    <div className=""> 
     {/* <div className="h-screen bg-gradient-to-tr"> */}
       <div className="flex flex-col items-center p-4 text-white nav md:flex-row">
-       
-        <ul className="flex flex-col gap-4 md:flex-row">
-          <li>
-            <a
-              className="text-xl"
-              href="#about"
-            >
-              About Me
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-xl"
-              href="#projects"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-xl"
-              href="#contact"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
+       <NavBar />
       </div>
 
       <main className="p-5 smaller-margin">

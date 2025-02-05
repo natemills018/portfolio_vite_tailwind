@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         palanquin: ['Palanquin', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        ubuntu: ['Ubuntu', 'sans-serif']
       },
       colors: {
         'primary': "#ECEEFF",
