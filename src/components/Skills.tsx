@@ -1,13 +1,15 @@
 import React from "react";
 
 interface SkillsProps {
-
+    imageSrc: string;
+    buttonTile: string;
+    buttonDescription: string;
 }
 
 
 const Skills = (props: SkillsProps) => {
-
-
+    
+    console.log()
     return (
         <div>
 
@@ -18,4 +20,4 @@ const Skills = (props: SkillsProps) => {
     )
 }
 
-export default Skills;
+export default Skills;  

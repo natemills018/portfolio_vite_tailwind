@@ -21,7 +21,6 @@ import Article from "./components/ArticleTest";
 import MyCard from "./components/RevealCard";
 import PortfolioBg from "./components/PortfolioBG";
 
-
 const App = () => {
   const images = {
     // heere's where I'll add an array of images for gallery
@@ -46,10 +45,19 @@ const App = () => {
   };
 
   return (
-    <div className=""> 
-    {/* <div className="h-screen bg-gradient-to-tr"> */}
+    <div className="">
+      {/* <div className="h-screen bg-gradient-to-tr"> */}
       <div className="flex flex-col items-center p-4 text-white nav md:flex-row">
-       <NavBar />
+        <NavBar />
+      </div>
+      <div className="pt-5">
+        <div className="avatar">
+          <div className="rounded-full w-84 drop-shadow-xl">
+            <img src="/images/200x200v2.png" />
+          </div>
+        </div>
+
+
       </div>
 
       <main className="p-5 smaller-margin">
@@ -89,7 +97,7 @@ const App = () => {
         </div>
       </main>
 
-      <MyCard /> 
+      <MyCard />
 
       <div
         className="container big-margin"
@@ -132,7 +140,7 @@ const App = () => {
         className="container"
         id="contact"
       ></div>
-    {/* </div> */}
+      {/* </div> */}
     </div>
   );
 };
